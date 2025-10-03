@@ -14,31 +14,34 @@ folders={
 #for other things
 folders["Others"]=[]
 
-#making those folders
-for i in folders:
-    folder_path=os.path.join(downloads,i)
-    os.makedirs(folder_path, exist_ok=True) #dont use mkdir cuz it throws error if it already exists
+def main():
+    #making those folders
+    for i in folders:
+        folder_path=os.path.join(downloads,i)
+        os.makedirs(folder_path, exist_ok=True) #dont use mkdir cuz it throws error if it already exists
 
-for item in os.listdir(downloads):
-    item_path=os.path.join(downloads, item)
+    for item in os.listdir(downloads):
+        item_path=os.path.join(downloads, item)
 
-    if os.path.isdir(item_path): #if its a folder then skip
-        continue
+        if os.path.isdir(item_path): #if its a folder then skipp
+            continue
 
-    file_ext=os.path.splitext(item)[1].lower()
+        file_ext=os.path.splitext(item)[1].lower()
 
-    for folder, extension in folders.items():
-        if file_ext in extension:
-            new_path=os.path.join(downloads,folder,item)
-            shutil.move(item_path, new_path)
-            print(f"moved {item} to {folder}")
-            break
-    else:
-        new_path=os.path.join(downloads, "Others", item)
-        os.makedirs(os.path.join(downloads,"Others"), exist_ok=True)
-        shutil.move(item_path,new_path)
-        print(f"moved{item} to {folder}")
+        for folder, extension in folders.items():
+            if file_ext in extension:
+                new_path=os.path.join(downloads,folder,item)
+                shutil.move(item_path, new_path)
+                print(f"moved {item} to {folder}")
+                break
+        else:
+            new_path=os.path.join(downloads, "Others", item)
+            os.makedirs(os.path.join(downloads,"Others"), exist_ok=True)
+            shutil.move(item_path,new_path)
+            print(f"moved{item} to {folder}")
 
 
+if __name__=="__main__":
+    main()
 
 

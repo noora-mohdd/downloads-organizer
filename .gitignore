@@ -1,0 +1,12 @@
+# Python virtual environment
+venv/
+
+# PyInstaller temporary folders
+build/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VSCode / IDE files
+.vscode/

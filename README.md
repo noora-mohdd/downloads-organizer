@@ -19,8 +19,6 @@ A simple tool to automatically organize your **Downloads** folder by file type. 
 3. Double-click `main.exe`.
 4. Your **own Downloads folder** will be organized automatically.
 
-> **Note:** The program only organizes the Downloads folder of the user who runs it.
-
 ### Option 2: Using Python script (optional)
 1. Make sure Python 3 is installed.
 2. Clone the repository

@@ -28,7 +28,8 @@ A simple tool to automatically organize your **Downloads** folder by file type. 
 4. Your Downloads folder will be organized automatically.
 
 ## Example Folder Structure After Running:
-```Downloads/
+```
+Downloads/
 ├── Pictures/
 ├── Music/
 ├── Videos/
@@ -36,6 +37,7 @@ A simple tool to automatically organize your **Downloads** folder by file type. 
 ├── Applications/
 ├── Archives/
 ├── Projects/
-├── Others/```
+├── Others/
+```
 
 
